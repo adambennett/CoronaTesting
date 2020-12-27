@@ -174,7 +174,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/Server/corona-testing-server" />
       <path value="$PROJECT_DIR$/corona-testing-server" />
-      <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
 </project>
