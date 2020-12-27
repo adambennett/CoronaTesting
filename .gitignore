@@ -1,0 +1,7 @@
+/corona-testing-server/dist
+/corona-testing-server/node_modules
+/corona-testing-front/node_modules
+/corona-testing-front/dist
+/corona-testing-front/tmp
+/corona-testing-front/out-tsc
+/corona-testing-front/bazel-out
