@@ -7,6 +7,7 @@ import { HomepageComponent } from './views/homepage/homepage.component';
 import { FormInputComponent } from './views/form-input/form-input.component';
 import { FormSubmittedComponent } from './views/form-submitted/form-submitted.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,11 +16,12 @@ import {HttpClientModule} from "@angular/common/http";
     FormInputComponent,
     FormSubmittedComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
