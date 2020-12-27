@@ -15,6 +15,7 @@ export class PatientController {
 
     @Post('submit')
     post(patient: Patient): any {
+        console.log("patient", patient);
         return this.patients.create(patient);
     }
 }

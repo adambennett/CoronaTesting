@@ -12,11 +12,13 @@ export class FormInputComponent implements OnInit {
 
   constructor(private connector: ConnectorService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-
-  createPatient() {
-
+  createPatient(patient: Patient) {
+    this.connector.submitForm(patient).subscribe(data => {
+      console.log('got data back', data);
+    }, error => {
+      console.log("Error creating patient!", error);
+    });
   }
 }
