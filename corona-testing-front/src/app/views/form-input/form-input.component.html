@@ -88,6 +88,51 @@
                    [(ngModel)]="patient.ethnicity"/>
           </div>
         </div>
+        <h5>Insurance Information</h5>
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="patient-id">Patient ID</label>
+            <input type="text" id="patient-id" name="patient-id" class="form-control rounded-pill"
+                   [(ngModel)]="patient.insurance_patient_id"/>
+          </div>
+          <div class="col-sm-4">
+            <label for="group-id">Group ID</label>
+            <input type="text" id="group-id" name="patient-id" class="form-control rounded-pill"
+                   [(ngModel)]="patient.insurance_group_id"/>
+          </div>
+          <div class="col-sm-4">
+            <label for="insured">Insured</label>
+            <input type="text" id="insured" name="insured" class="form-control rounded-pill"
+                   [(ngModel)]="patient.insured"/>
+          </div>
+        </div>
+
+        <h5>Answer True or False if you have any of the following symptoms?</h5>
+        <div class="row">
+
+          <div class="col-sm-6">
+            <h6>Persistent Cough?</h6>
+            <label class="radio-inline">
+              <input type="radio" name="survey" value="true">
+              True
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="survey" value="true">
+              False
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <h6>Shortness of Breathe?</h6>
+            <label class="radio-inline">
+              <input type="radio" name="survey" value="true">
+              True
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="survey" value="true">
+              False
+            </label>
+          </div>
+
       </div>
 
       <div id="submit-button" class="d-flex justify-content-center">
