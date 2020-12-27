@@ -43,12 +43,18 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <label>State</label>
-            <mat-select name="state" (valueChange)="stateSelected($event)" [(ngModel)]="patient.state" class="form-control rounded-pill">
-              <mat-option *ngFor="let state of stateNames" [value]="state">
-                {{state}}
-              </mat-option>
-            </mat-select>
+            <label for="state">State</label><br>
+              <select id="state" class="rounded-pill rounded-lg" [(ngModel)]="patient.state">
+                <option *ngFor="let state of stateNames" [value]="state">
+                  {{this.state}}
+                </option>
+              </select>
+<!--            <label for="state">State</label>-->
+<!--            <mat-select name="state" id="state" [(ngModel)]="patient.state" class="form-control rounded-pill">-->
+<!--              <mat-option *ngFor="let state of stateNames" [value]="state">-->
+<!--                {{this.state.valueOf()}}-->
+<!--              </mat-option>-->
+<!--            </mat-select>-->
           </div>
           <div class="col-sm-4">
             <label for="zipcode">Zip Code</label>
