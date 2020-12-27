@@ -8,6 +8,7 @@ import { FormInputComponent } from './views/form-input/form-input.component';
 import { FormSubmittedComponent } from './views/form-submitted/form-submitted.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {FormsModule} from "@angular/forms";
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        MatRadioModule
     ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
