@@ -88,6 +88,9 @@
                    [(ngModel)]="patient.ethnicity"/>
           </div>
         </div>
+      </div>
+
+      <div id="insurance-block" class="input-block">
         <h5>Insurance Information</h5>
         <div class="row">
           <div class="col-sm-4">
@@ -113,33 +116,33 @@
           <div class="col-sm-6">
             <h6>Persistent Cough?</h6>
             <label class="radio-inline">
-              <input type="radio" name="survey" value="true">
+              <input type="radio" (click)="setCough(true)">
               True
             </label>
             <label class="radio-inline">
-              <input type="radio" name="survey" value="true">
+              <input type="radio" (click)="setCough(false)">
               False
             </label>
           </div>
           <div class="col-sm-6">
-            <h6>Shortness of Breathe?</h6>
+            <h6>Shortness of Breath?</h6>
             <label class="radio-inline">
-              <input type="radio" name="survey" value="true">
+              <input type="radio" (click)="setShortness(true)">
               True
             </label>
             <label class="radio-inline">
-              <input type="radio" name="survey" value="true">
+              <input type="radio" (click)="setShortness(false)">
               False
             </label>
           </div>
+        </div>
 
-      </div>
-
-      <div id="submit-button" class="d-flex justify-content-center">
-        <div class="d-flex justify-content-center">
-          <button type="submit" (click)="createPatient(patient)" class="btn btn-lg btn-success rounded-pill create-button">
-            <i class="fa fa-plus-circle fa-3x">Submit</i>
-          </button>
+        <div id="submit-button" class="d-flex justify-content-center">
+          <div class="d-flex justify-content-center">
+            <button type="submit" (click)="createPatient(patient)" class="btn btn-lg btn-success rounded-pill create-button">
+              <i class="fa fa-plus-circle fa-3x">Submit</i>
+            </button>
+          </div>
         </div>
       </div>
     </form>

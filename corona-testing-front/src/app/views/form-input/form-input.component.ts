@@ -61,4 +61,12 @@ export class FormInputComponent implements OnInit {
       console.log("Error creating patient!", error);
     });
   }
+
+  setCough(val: boolean): void {
+    this.patient.persistent_cough = val;
+  }
+
+  setShortness(val: boolean): void {
+    this.patient.shortness_of_breath = val;
+  }
 }
