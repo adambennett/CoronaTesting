@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="251024e4-0813-4965-8a90-745ee87dff46" name="Default Changelist" comment="init" />
+    <list default="true" id="251024e4-0813-4965-8a90-745ee87dff46" name="Default Changelist" comment="init">
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/controllers/patient.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/environment/vars.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/models/patient/patient.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/models/patient/patient.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/models/patient/patient.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corona-testing-server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/corona-testing-server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corona-testing-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/corona-testing-server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corona-testing-server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/corona-testing-server/src/app.module.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -64,6 +75,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -76,6 +88,11 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Users\eX_Di\git\CoronaTesting\corona-testing-server\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\eX_Di\git\CoronaTesting\corona-testing-server\src\models\patient" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Backend (Dev)">
     <configuration name="Tests (CoronaTesting)" type="JavaScriptTestRunnerKarma">
@@ -147,8 +164,16 @@
       <updated>1609032665750</updated>
       <workItem from="1609032668119" duration="495000" />
       <workItem from="1609033214762" duration="502000" />
-      <workItem from="1609033787870" duration="312000" />
+      <workItem from="1609033787870" duration="3016000" />
     </task>
+    <task id="LOCAL-00001" summary="config files">
+      <created>1609034139162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609034139162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,5 +197,7 @@
       <path value="$PROJECT_DIR$/corona-testing-server" />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="config files" />
   </component>
 </project>
