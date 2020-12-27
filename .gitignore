@@ -6,3 +6,4 @@
 /corona-testing-front/out-tsc
 /corona-testing-front/bazel-out
 /.idea/workspace.xml
+/node_modules/
