@@ -8,6 +8,9 @@ import { FormInputComponent } from './views/form-input/form-input.component';
 import { FormSubmittedComponent } from './views/form-submitted/form-submitted.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {MatSelectModule} from "@angular/material/select";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -18,11 +21,13 @@ import {FormsModule} from "@angular/forms";
   ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        MatSelectModule
     ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

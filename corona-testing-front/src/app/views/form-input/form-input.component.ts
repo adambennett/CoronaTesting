@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ConnectorService} from '../../services/connector/connector.service';
 import {Patient} from "../../models/Patient";
+import {getCountries, getStates} from "country-state-picker";
+import {Country} from "../../models/Country";
 
 @Component({
   selector: 'app-form-input',
@@ -37,10 +39,19 @@ export class FormInputComponent implements OnInit {
 
   genders: string[] = ['Male', 'Female', 'Prefer not to say'];
   appointmentTimes: string[] = ['10:00 am', '11:00 am', '12:00 noon', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm'];
+  countries: Country[];
+  selectedCountry: Country;
+  states: string[];
 
   constructor(private connector: ConnectorService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.countries = getCountries();
+    console.log('countries', this.countries);
+    this.selectedCountry = this.countries.filter(country => country.code === 'us')[0];
+    this.states = getStates(this.selectedCountry.code);
+    console.log('states', this.states);
+  }
 
   createPatient(patient: Patient) {
     console.log("going to send", patient);

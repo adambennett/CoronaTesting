@@ -26,3 +26,8 @@ body{
 
 html, body { height: 100%; }
 //body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.max-height {
+  max-height: 175px !important;
+  height: auto !important;
+}
