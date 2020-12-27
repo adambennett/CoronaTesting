@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { FormInputComponent } from './views/form-input/form-input.component';
 import { FormSubmittedComponent } from './views/form-submitted/form-submitted.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { FormSubmittedComponent } from './views/form-submitted/form-submitted.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
