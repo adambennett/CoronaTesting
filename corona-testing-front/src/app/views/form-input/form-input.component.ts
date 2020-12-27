@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ConnectorService} from '../../services/connector/connector.service';
 import {Patient} from "../../models/Patient";
 import {getCountries, getStates} from "country-state-picker";
 import {Country} from "../../models/Country";
+import scus from 'state-counties-us';
+import {State} from "../../models/State";
 
 @Component({
   selector: 'app-form-input',
@@ -37,36 +39,83 @@ export class FormInputComponent implements OnInit {
     zipcode: ""
   };
 
-  genders: string[] = ['Male', 'Female', 'Prefer not to say'];
-  appointmentTimes: string[] = ['10:00 am', '11:00 am', '12:00 noon', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm'];
+  genders: string[] = ['Male', 'Female', 'Other', 'Prefer not to say'];
+  appointmentTimes: string[] = ['10:00 am', '11:00 am', '12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm'];
+  races: string[] = ['American Indian or Alaska Native', 'Asian', 'Black or African American', 'Native Hawaiian or Pacific Islander', 'White'];
+  ethnicities: string[] = ['Hispanic or Latino', 'Not Hispanic or Latino'];
+  insuredOptions: string[] = ['Yes', 'No'];
+  counties: string[] = [];
+  cities: string[] = [];
   countries: Country[];
   selectedCountry: Country;
-  states: string[];
+  stateNames: string[];
+  states: State[] = [];
+  countyPlaceholder = 'Please select a state.';
+  maxDate: Date;
 
   constructor(private connector: ConnectorService) { }
 
   ngOnInit(): void {
+    this.maxDate = new Date();
     this.countries = getCountries();
-    console.log('countries', this.countries);
     this.selectedCountry = this.countries.filter(country => country.code === 'us')[0];
-    this.states = getStates(this.selectedCountry.code);
-    console.log('states', this.states);
+    this.stateNames = getStates(this.selectedCountry.code);
+    const countyStates = scus.getStates();
+    this.stateNames.splice(11, 0, 'Guam');
+    for (let i = 0; i < countyStates.length; i++) {
+      this.states.push({
+        name: this.stateNames[i],
+        code: countyStates[i]
+      });
+    }
   }
 
   createPatient(patient: Patient) {
-    console.log("going to send", patient);
     this.connector.submitForm(patient).subscribe(data => {
-      console.log('got data back', data);
+      console.log('created patient', data);
     }, error => {
       console.log("Error creating patient!", error);
     });
   }
 
-  setCough(val: boolean): void {
-    this.patient.persistent_cough = val;
+  stateSelected(e: any): void {
+    this.patient.state = e;
+    const code = this.states.filter(state => state.name === e)[0].code;
+    this.counties = scus.getCountiesByState(code);
   }
 
-  setShortness(val: boolean): void {
-    this.patient.shortness_of_breath = val;
+  setCough(): void {
+    try {
+      // @ts-ignore
+      this.patient.persistent_cough = document.getElementById("persistent-cough").checked;
+    } catch (err: any) { }
+  }
+
+  setShortness(): void {
+    try {
+      // @ts-ignore
+      this.patient.shortness_of_breath = document.getElementById("breath-shortness").checked;
+    } catch (err: any) { }
+  }
+
+  setFever(): void {
+    try {
+      // @ts-ignore
+      this.patient.fever = document.getElementById("fever").checked;
+    } catch (err: any) { }
+  }
+
+  setExposed(): void {
+    try {
+      // @ts-ignore
+      this.patient.sure_exposure = document.getElementById("sure-exposure").checked;
+    } catch (err: any) { }
+  }
+
+  setSuspectedExposure(): void {
+    try {
+      // @ts-ignore
+      this.patient.suspected_exposure = document.getElementById("suspected-exposure").checked;
+    } catch (err: any) { }
   }
 }
