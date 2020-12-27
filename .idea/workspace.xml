@@ -2,42 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="251024e4-0813-4965-8a90-745ee87dff46" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/CoronaTesting.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/.browserslistrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/e2e/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/e2e/src/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/e2e/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/app/app.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/src/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corona-testing-front/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/controllers/patient.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/environment/vars.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/models/patient/patient.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/models/patient/patient.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corona-testing-server/src/models/patient/patient.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corona-testing-server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/corona-testing-server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corona-testing-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/corona-testing-server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corona-testing-server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/corona-testing-server/src/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,14 +26,47 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="bennett" />
+                    <option name="lastUsedInstant" value="1609034095" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1609034072" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1609034071" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1mDebkxYSbK5lRRcqkkPxzb7Kmp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -69,6 +75,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -81,6 +88,11 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Users\eX_Di\git\CoronaTesting\corona-testing-server\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\eX_Di\git\CoronaTesting\corona-testing-server\src\models\patient" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Backend (Dev)">
     <configuration name="Tests (CoronaTesting)" type="JavaScriptTestRunnerKarma">
@@ -152,7 +164,16 @@
       <updated>1609032665750</updated>
       <workItem from="1609032668119" duration="495000" />
       <workItem from="1609033214762" duration="502000" />
+      <workItem from="1609033787870" duration="3016000" />
     </task>
+    <task id="LOCAL-00001" summary="config files">
+      <created>1609034139162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609034139162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,5 +196,7 @@
       <path value="$PROJECT_DIR$/Server/corona-testing-server" />
       <path value="$PROJECT_DIR$/corona-testing-server" />
     </ignored-roots>
+    <MESSAGE value="config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="config files" />
   </component>
 </project>
