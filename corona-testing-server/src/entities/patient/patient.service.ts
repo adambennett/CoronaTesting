@@ -18,8 +18,8 @@ export class PatientService {
         return this.patientRepository.findOne(id);
     }
 
-    create(patient: Patient): Patient {
-        return this.patientRepository.create(patient);
+    async create(patient: Patient): Promise<Patient> {
+        return this.patientRepository.save(patient);
     }
 
     async remove(id: string): Promise<void> {

@@ -1,4 +1,4 @@
-import {Controller, Get, Post} from '@nestjs/common';
+import {Body, Controller, Get, Post} from '@nestjs/common';
 import {PatientService} from "./patient.service";
 import {Patient} from "./patient.entity";
 
@@ -14,8 +14,10 @@ export class PatientController {
     }
 
     @Post('submit')
-    post(patient: Patient): any {
-        console.log("patient", patient);
-        return this.patients.create(patient);
+    async post(@Body() body: any): Promise<any> {
+        const patient: Patient = body.patient;
+        return await this.patients.create(patient).catch(err => {
+            console.log('error creating', err);
+        });
     }
 }

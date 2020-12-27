@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from "rxjs";
 import {Patient} from "../../models/Patient";
 
@@ -21,7 +21,10 @@ export class ConnectorService {
     return this.http.get<Patient>(this.API + this.PATIENTS_ENDPOINT + 'find/' + id);
   }
 
-  submitForm(form: any): Observable<any> {
-    return this.http.post(this.API + this.PATIENTS_ENDPOINT + 'submit', { form } , {})
+  submitForm(patient: any): Observable<any> {
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    return this.http.post(this.API + this.PATIENTS_ENDPOINT + 'submit', { patient } , { headers })
   }
 }
