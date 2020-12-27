@@ -18,6 +18,10 @@ export class PatientService {
         return this.patientRepository.findOne(id);
     }
 
+    create(patient: Patient): Patient {
+        return this.patientRepository.create(patient);
+    }
+
     async remove(id: string): Promise<void> {
         await this.patientRepository.delete(id);
     }
