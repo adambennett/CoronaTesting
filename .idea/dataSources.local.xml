@@ -19,5 +19,15 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="covid_testing@duelistmetrics-server.c9jzpwyigd3l.us-east-2.rds.amazonaws.com" uuid="7d6cf7e4-036e-46a9-9ae2-b6e4119c84ce">
+      <database-info product="MySQL" version="5.7.26-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.26">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>yugi</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

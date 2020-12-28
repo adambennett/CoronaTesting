@@ -17,7 +17,7 @@ import {PatientModule} from "./entities/patient/patient.module";
       password: env.DB_PASS,
       database: env.DB_NAME,
       entities: [Patient],
-      synchronize: true,
+      synchronize: env.DB_SYNC,
     }),
     PatientModule
   ],
