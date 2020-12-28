@@ -5,6 +5,9 @@ import {getCountries, getStates} from "country-state-picker";
 import {Country} from "../../models/Country";
 import scus from 'state-counties-us';
 import {State} from "../../models/State";
+import {Route, Router} from "@angular/router";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {AlertHelper, Util} from "../../util/Utilities";
 
 @Component({
   selector: 'app-form-input',
@@ -52,10 +55,12 @@ export class FormInputComponent implements OnInit {
   states: State[] = [];
   countyPlaceholder = 'Please select a state.';
   maxDate: Date;
+  alertHelper: AlertHelper;
 
-  constructor(private connector: ConnectorService) { }
+  constructor(private connector: ConnectorService, private route: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    this.alertHelper = new AlertHelper(this.snackBar);
     this.maxDate = new Date();
     this.countries = getCountries();
     this.selectedCountry = this.countries.filter(country => country.code === 'us')[0];
@@ -73,8 +78,16 @@ export class FormInputComponent implements OnInit {
   createPatient(patient: Patient) {
     this.connector.submitForm(patient).subscribe(data => {
       console.log('created patient', data);
+      Util.goodToast(this.alertHelper,'Signed up successfully.');
+      this.route.navigate(['/']).catch(err => {
+        console.error('error navigating back to homepage');
+      });
     }, error => {
       console.log("Error creating patient!", error);
+      Util.errorToast(this.alertHelper, 'Error signing up!');
+      this.route.navigate(['/']).catch(err => {
+        console.error('error navigating back to homepage');
+      });
     });
   }
 
