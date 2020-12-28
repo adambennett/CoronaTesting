@@ -5,14 +5,17 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "start-web": "npm run start --prefix corona-testing-front",
-    "build-web": "npm run build --prefix corona-testing-front",
-    "start-api-prod": "npm run start --prefix corona-testing-server",
+    "start-web-prod": "npm run build --prefix corona-testing-front & npm run start-prod --prefix corona-testing-front",
+    "start-web-dev": "npm run start --prefix corona-testing-front",
+    "start-api-prod": "npm run build --prefix corona-testing-server & npm run start --prefix corona-testing-server",
     "start-api-dev": "npm run start:dev --prefix corona-testing-server",
-    "application-start-dev": "npm run p \"npm run start-web\" \"npm run start-api-dev\"",
-    "application-start": "npm run build-web & npm run p \"npm run start-web\" \"npm run start-api-prod\"",
+    "application-start-dev": "npm run p \"npm run start-web-dev\" \"npm run start-api-dev\"",
+    "application-start": "npm run p \"npm run start-web-prod\" \"npm run start-api-prod\"",
     "browser-check": "npm run browsers --prefix corona-testing-front",
     "p": "parallelshell"
+  },
+  "engines": {
+    "node": "12.18.3"
   },
   "dependencies": {
     "parallelshell": "file:parallelshell"
