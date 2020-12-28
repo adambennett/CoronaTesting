@@ -43,18 +43,20 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <label for="state">State</label><br>
-              <select id="state" class="rounded-pill rounded-lg" [(ngModel)]="patient.state">
-                <option *ngFor="let state of stateNames" [value]="state">
-                  {{this.state}}
-                </option>
-              </select>
+
+<!--            Bootstrap Version   -->
 <!--            <label for="state">State</label>-->
-<!--            <mat-select name="state" id="state" [(ngModel)]="patient.state" class="form-control rounded-pill">-->
-<!--              <mat-option *ngFor="let state of stateNames" [value]="state">-->
-<!--                {{this.state.valueOf()}}-->
-<!--              </mat-option>-->
-<!--            </mat-select>-->
+<!--              <select id="state" class="rounded-pill rounded-lg" [(ngModel)]="patient.state">-->
+<!--                <option *ngFor="let state of stateNames" [value]="state">-->
+<!--                  {{this.state}}-->
+<!--                </option>-->
+<!--              </select>-->
+            <label for="state">State</label>
+            <mat-select name="state" id="state" [(ngModel)]="patient.state" class="rounded-pill">
+              <mat-option *ngFor="let state of stateNames" [value]="state" class="text-danger">
+                {{this.state}}
+              </mat-option>
+            </mat-select>
           </div>
           <div class="col-sm-4">
             <label for="zipcode">Zip Code</label>
@@ -78,24 +80,24 @@
         <h5>Personal Information</h5>
         <div class="row">
           <div class="col-sm-4">
-            <label>Race</label>
-            <mat-select [(ngModel)]="patient.race" panelClass="maxHeight" name="race" class="form-control rounded-pill">
+            <label for="race">Race</label>
+            <mat-select name="race" id="race" [(ngModel)]="patient.race" panelClass="maxHeight"  class="rounded-pill">
               <mat-option *ngFor="let race of races" [value]="race">
-                {{race}}
+                {{this.race}}
               </mat-option>
             </mat-select>
           </div>
           <div class="col-sm-4">
-            <label>Gender</label>
-            <mat-select [(ngModel)]="patient.gender" panelClass="maxHeight" name="gender" class="form-control rounded-pill">
+            <label for="gender">Gender</label>
+            <mat-select [(ngModel)]="patient.gender" panelClass="maxHeight" name="gender" id="gender" class="rounded-pill">
               <mat-option *ngFor="let gender of genders" [value]="gender">
                 {{gender}}
               </mat-option>
             </mat-select>
           </div>
           <div class="col-sm-4">
-            <label>Ethnicity</label>
-            <mat-select [(ngModel)]="patient.ethnicity" panelClass="maxHeight" name="ethnicity" class="form-control rounded-pill">
+            <label for="ethnicity">Ethnicity</label>
+            <mat-select [(ngModel)]="patient.ethnicity" panelClass="maxHeight" name="ethnicity" id="ethnicity" class="rounded-pill">
               <mat-option *ngFor="let ethnicity of ethnicities" [value]="ethnicity">
                 {{ethnicity}}
               </mat-option>
