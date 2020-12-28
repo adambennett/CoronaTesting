@@ -43,16 +43,8 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-
-<!--            Bootstrap Version   -->
-<!--            <label for="state">State</label>-->
-<!--              <select id="state" class="rounded-pill rounded-lg" [(ngModel)]="patient.state">-->
-<!--                <option *ngFor="let state of stateNames" [value]="state">-->
-<!--                  {{this.state}}-->
-<!--                </option>-->
-<!--              </select>-->
             <label for="state">State</label>
-            <mat-select name="state" id="state" [(ngModel)]="patient.state" class="rounded-pill">
+            <mat-select name="state" id="state" (valueChange)="stateSelected($event)" [(ngModel)]="patient.state" class="form-control rounded-pill">
               <mat-option *ngFor="let state of stateNames" [value]="state" class="text-danger">
                 {{this.state}}
               </mat-option>
@@ -64,10 +56,10 @@
           </div>
 
           <div class="col-sm-4">
-            <label>County</label>
-            <mat-select name="county" [placeholder]="countyPlaceholder" [(ngModel)]="patient.county" class="form-control rounded-pill">
-              <mat-option *ngFor="let county of counties" [value]="county">
-                {{county}}
+            <label for="county">County</label>
+            <mat-select name="county" id="county" [(ngModel)]="patient.county" class="form-control rounded-pill">
+              <mat-option *ngFor="let county of counties" [value]="county" class="text-danger">
+                {{this.county}}
               </mat-option>
             </mat-select>
           </div>
@@ -81,7 +73,7 @@
         <div class="row">
           <div class="col-sm-4">
             <label for="race">Race</label>
-            <mat-select name="race" id="race" [(ngModel)]="patient.race" panelClass="maxHeight"  class="rounded-pill">
+            <mat-select name="race" id="race" [(ngModel)]="patient.race" panelClass="maxHeight"  class="form-control rounded-pill">
               <mat-option *ngFor="let race of races" [value]="race">
                 {{this.race}}
               </mat-option>
@@ -89,7 +81,7 @@
           </div>
           <div class="col-sm-4">
             <label for="gender">Gender</label>
-            <mat-select [(ngModel)]="patient.gender" panelClass="maxHeight" name="gender" id="gender" class="rounded-pill">
+            <mat-select [(ngModel)]="patient.gender" panelClass="maxHeight" name="gender" id="gender" class="form-control rounded-pill">
               <mat-option *ngFor="let gender of genders" [value]="gender">
                 {{gender}}
               </mat-option>
@@ -97,7 +89,7 @@
           </div>
           <div class="col-sm-4">
             <label for="ethnicity">Ethnicity</label>
-            <mat-select [(ngModel)]="patient.ethnicity" panelClass="maxHeight" name="ethnicity" id="ethnicity" class="rounded-pill">
+            <mat-select [(ngModel)]="patient.ethnicity" panelClass="maxHeight" name="ethnicity" id="ethnicity" class="form-control rounded-pill">
               <mat-option *ngFor="let ethnicity of ethnicities" [value]="ethnicity">
                 {{ethnicity}}
               </mat-option>
@@ -107,7 +99,7 @@
         <div class="row">
           <div class="col-sm-4">
             <label for="birthday-picker">Birthday</label><br>
-            <input matInput required id="birthday-picker" name="birthday-picker" [(ngModel)]="patient.birthday" [max]="maxDate" [matDatepicker]="picker">
+            <input matInput required id="birthday-picker" name="birthday-picker" [(ngModel)]="patient.birthday" [max]="maxDate" [matDatepicker]="picker" class="form-control rounded-pill">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </div>
@@ -116,10 +108,10 @@
             <input type="text" id="social" name="social" class="form-control rounded-pill" [(ngModel)]="patient.social_security"/>
           </div>
           <div class="col-sm-4">
-            <label>Appointment Time</label>
-            <mat-select [(ngModel)]="patient.appointment_time" panelClass="maxHeight" name="time" class="form-control rounded-pill">
-              <mat-option *ngFor="let time of appointmentTimes" [value]="time">
-                {{time}}
+            <label for="time">Appointment Time</label>
+            <mat-select name="time" id="time" [(ngModel)]="patient.appointment_time" class="form-control rounded-pill">
+              <mat-option *ngFor="let time of appointmentTimes" [value]="time" class="text-danger">
+                {{this.time}}
               </mat-option>
             </mat-select>
           </div>
@@ -140,10 +132,10 @@
             <input type="text" id="group-id" name="group-id" class="form-control rounded-pill" [(ngModel)]="patient.insurance_group_id"/>
           </div>
           <div class="col-sm-4">
-            <label>Insured</label>
-            <mat-select [(ngModel)]="patient.insured" panelClass="maxHeight" name="insured" class="form-control rounded-pill">
-              <mat-option *ngFor="let insured of insuredOptions" [value]="insured === 'Yes'">
-                {{insured}}
+            <label for="insured">Insured</label>
+            <mat-select name="insured" id="insured" [(ngModel)]="patient.insured" class="form-control rounded-pill">
+              <mat-option *ngFor="let insured of insuredOptions" [value]="insured" class="text-danger">
+                {{this.insured}}
               </mat-option>
             </mat-select>
           </div>
